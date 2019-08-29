@@ -1,0 +1,8 @@
+node_modules
+lib
+tags
+coverage
+yarn.lock
+.*.swp
+.nyc_output
+package-lock.json
