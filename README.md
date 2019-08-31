@@ -1,6 +1,7 @@
 # Magister OpenID
 
 <img src="https://img.shields.io/github/issues/idiidk/magister-openid?style=for-the-badge" />
+<img src="https://img.shields.io/librariesio/github/idiidk/magister-openid?style=for-the-badge" />
 
 > OpenID authentication wrapper for the Magister digital school system
 
