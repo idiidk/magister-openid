@@ -8,7 +8,6 @@ export class AuthManager {
     this._authProvider = new AuthProvider(tenant);
 
     this.tokenSet = tokenSet || {};
-    if (tokenSet) this.checkExpiration();
   }
 
   get accessToken() {
