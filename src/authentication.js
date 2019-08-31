@@ -1,7 +1,7 @@
 "use strict";
 
 import fetch from "node-fetch";
-import { Issuer, generators } from "openid-client";
+import { Issuer, generators, custom } from "openid-client";
 import authCode from "@magisterjs/authcode";
 
 import { extractQueryParameter } from "./utils/common";
@@ -52,6 +52,8 @@ export class AuthProvider {
       response_types: ["code id_token"],
       id_token_signed_response_alg: "RS256"
     });
+
+    this.client[custom.clock_tolerance] = 5;
 
     const authUrl = this.client.authorizationUrl({
       scope: issuer.scopes_supported.join(" "),
