@@ -2,7 +2,6 @@
 
 import fetch from "node-fetch";
 import { Issuer, generators, custom } from "openid-client";
-import authCode from "@magisterjs/authcode";
 
 import { extractQueryParameter } from "./utils/common";
 
@@ -40,7 +39,7 @@ export class AuthProvider {
     );
   }
 
-  async getCode(username, password) {
+  async getCode(username, password, authCode) {
     const issuerUrl = "https://accounts.magister.net";
     const issuer = await Issuer.discover(issuerUrl);
     const codeChallenge = generators.codeChallenge(this.codeVerifier);

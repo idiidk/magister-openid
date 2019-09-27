@@ -36,8 +36,8 @@ export class AuthManager {
     return expired;
   }
 
-  async login(username, password) {
-    const code = await this._authProvider.getCode(username, password);
+  async login(username, password, authCode) {
+    const code = await this._authProvider.getCode(username, password, authCode);
     this.tokenSet = await this._authProvider.getTokenSet(code);
 
     return this.tokenSet;
