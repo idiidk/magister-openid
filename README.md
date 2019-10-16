@@ -15,7 +15,7 @@ import { username, password, tenant } from "./options.json";
 const manager = new AuthManager(tenant);
 
 async function login() {
-  const tokenSet = await manager.login(username, password);
+  const tokenSet = await manager.login(username, password, authCode);
   //do stuff with tokens
 }
 
