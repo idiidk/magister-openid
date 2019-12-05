@@ -1,7 +1,7 @@
 import { expect } from "chai";
 
 import { AuthManager } from "../src/manager";
-import { username, password, tenant } from "./options.json";
+import { username, password, tenant, authCode } from "./options.json";
 
 const manager = new AuthManager(tenant);
 
@@ -9,12 +9,13 @@ const manager = new AuthManager(tenant);
 // {
 //   "username": "",
 //   "password": "",
-//   "tenant": ""
+//   "tenant": "",
+//   "authCode": ""
 // }
 
 describe("AuthManager", () => {
   it("should be able to log in and verify the token set", async () => {
-    const tokenSet = await manager.login(username, password);
+    const tokenSet = await manager.login(username, password, authCode);
     expect(Object.keys(tokenSet)).to.contain("refresh_token");
   });
 
