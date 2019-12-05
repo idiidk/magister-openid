@@ -86,7 +86,7 @@ export class AuthProvider {
     )[0];
     const xsrfToken = xsrfCookie.split("=")[1].split(";")[0];
 
-    await fetch(`${issuerUrl}/challenge/username`, {
+    await fetch(`${issuerUrl}/challenges/username`, {
       method: "post",
       body: JSON.stringify({
         authCode,
@@ -101,7 +101,7 @@ export class AuthProvider {
       }
     }).then(this.validate);
 
-    const authCookies = await fetch(`${issuerUrl}/challenge/password`, {
+    const authCookies = await fetch(`${issuerUrl}/challenges/password`, {
       method: "post",
       body: JSON.stringify({
         authCode,
