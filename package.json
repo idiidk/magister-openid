@@ -1,6 +1,6 @@
 {
   "name": "magister-openid",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "OpenID authentication wrapper for the Magister digital school system",
   "main": "lib/manager.js",
   "repository": "https://github.com/idiidk/magister-openid.git",
