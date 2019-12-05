@@ -49,7 +49,8 @@ export class AuthProvider {
       client_id: "M6LOAPP",
       redirect_uris: ["m6loapp://oauth2redirect/"],
       response_types: ["code id_token"],
-      id_token_signed_response_alg: "RS256"
+      id_token_signed_response_alg: "RS256",
+      token_endpoint_auth_method: "none"
     });
 
     this.client[custom.clock_tolerance] = 5;
