@@ -29,6 +29,6 @@
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "node-fetch": "^2.6.0",
-    "openid-client": "^3.6.1"
+    "openid-client": "^3.8.4"
   }
 }
