@@ -4,6 +4,8 @@
 <img src="https://img.shields.io/librariesio/github/idiidk/magister-openid?style=for-the-badge" />
 
 > OpenID authentication wrapper for the Magister digital school system
+### Note this package is no longer actively maintained, use at your own risk.
+
 
 This package provides a simple and spec compliant API for requesting, refreshing and managing authentication tokens
 
