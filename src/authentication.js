@@ -115,8 +115,8 @@ export class AuthProvider {
         cookie: authResponse.headers.raw()["set-cookie"],
         "X-XSRF-TOKEN": xsrfToken
       }
-    }).then(response => {
-      this.validate(response);
+    }).then(async response => {
+      await this.validate(response);
       return response.headers.raw()["set-cookie"];
     });
 
