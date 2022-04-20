@@ -1,21 +1,17 @@
+import { resolve as resolvePath } from "path";
+import { config } from "dotenv";
 import { expect } from "chai";
 
 import { AuthManager } from "../src/manager";
-import { username, password, tenant, authCode } from "./options.json";
 
-const manager = new AuthManager(tenant);
+config({ path: resolvePath(process.cwd(), "test", ".env") });
+const { M6_USERNAME, M6_PASSWORD, M6_TENANT, M6_AUTH_CODE } = process.env;
 
-// options.json content:
-// {
-//   "username": "",
-//   "password": "",
-//   "tenant": "",
-//   "authCode": ""
-// }
+const manager = new AuthManager(M6_TENANT);
 
 describe("AuthManager", () => {
   it("should be able to log in and verify the token set", async () => {
-    const tokenSet = await manager.login(username, password, authCode);
+    const tokenSet = await manager.login(M6_USERNAME, M6_PASSWORD, M6_AUTH_CODE);
     expect(Object.keys(tokenSet)).to.contain("refresh_token");
   });
 

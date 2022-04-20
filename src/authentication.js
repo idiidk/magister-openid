@@ -27,7 +27,7 @@ export class AuthProvider {
   }
 
   refreshTokenSet(refreshToken) {
-    return this.client.refresh(refreshToken)
+    return this.client.refresh(refreshToken);
   }
 
   getTokenSet(code) {
