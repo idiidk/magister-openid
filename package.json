@@ -3,10 +3,10 @@
   "version": "0.1.7",
   "description": "OpenID authentication wrapper for the Magister digital school system",
   "main": "lib/manager.js",
-  "repository": "https://github.com/Jeroen2006/magister-openid.git",
-  "homepage": "https://github.com/Jeroen2006/magister-openid#readme",
+  "repository": "https://github.com/idiidk/magister-openid.git",
+  "homepage": "https://github.com/idiidk/magister-openid#readme",
   "bugs": {
-    "url": "https://github.com/Jeroen2006/magister-openid/issues"
+    "url": "https://github.com/idiidk/magister-openid/issues"
   },
   "author": "idiidk",
   "license": "LGPL-3.0",
