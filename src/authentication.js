@@ -56,7 +56,7 @@ export class AuthProvider {
     this.client[custom.clock_tolerance] = 5;
 
     const authUrl = this.client.authorizationUrl({
-      scope: issuer.scopes_supported.join(" "),
+      scope: "openid profile offline_access",
       code_challenge: codeChallenge,
       code_challenge_method: "S256",
       acr_values: `tenant:${this.tenant}`,
