@@ -12,14 +12,14 @@
   "license": "LGPL-3.0",
   "private": false,
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1"
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/plugin-transform-runtime": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/register": "^7.18.9",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0"
   },
   "scripts": {
     "build": "babel src -d lib",
@@ -27,9 +27,9 @@
     "test": "nyc mocha --require @babel/register"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
-    "dotenv": "^16.0.0",
-    "node-fetch": "^2.6.0",
-    "openid-client": "^3.8.4"
+    "@babel/runtime": "^7.19.0",
+    "dotenv": "^16.0.2",
+    "node-fetch": "^2.6.7",
+    "openid-client": "^5.1.9"
   }
 }
